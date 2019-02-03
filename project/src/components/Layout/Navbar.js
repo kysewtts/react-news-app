@@ -10,7 +10,7 @@ const navbar = (props) => {
                 <div className="nav-wrapper">
                     <Link to = '/' className="brand-logo">Logo</Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><Link to = "#">Sass</Link></li>
+                        <li><Link to = '#'>Sass</Link></li>
                     </ul>
                 </div>
             </nav>
