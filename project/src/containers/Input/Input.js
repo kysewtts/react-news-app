@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import Aux from '../../hoc/Aux/Aux';
+import * as actions from '../../store/actions/getAction';
 
 class Input extends Component{
     state = {
@@ -10,7 +13,9 @@ class Input extends Component{
             selectCategory: event.target.value
         })
     }
-    
+    handleNews = () => {
+        this.props.onSubmit(this.state.selectCategory);
+    }
     render(){
         console.log(this.state);
         return(
@@ -23,11 +28,18 @@ class Input extends Component{
                     </select>
                 </div>
                 <div style = {{"textAlign": "center"}}>
-                    <button type="button" className="btn btn-dark">Get News.!!</button>
+                    <button type="button" className="btn btn-dark" onClick = {this.handleNews}>Get News.!!</button>
                 </div>
             </Aux>
         );
     }
 }
 
-export default Input;
+const mapDispatchToProps = dispatch => {
+    return {
+        onSubmit: (sourceType) => dispatch(actions.fetch(sourceType))
+    };
+};
+
+
+export default connect(null, mapDispatchToProps)(Input);
