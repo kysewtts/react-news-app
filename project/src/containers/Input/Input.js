@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Aux from '../../hoc/Aux/Aux';
 import * as actions from '../../store/actions/getAction';
+import Posts from '../Posts/Posts';
 
 class Input extends Component{
     state = {
@@ -30,6 +31,7 @@ class Input extends Component{
                 <div style = {{"textAlign": "center"}}>
                     <button type="button" className="btn btn-dark" onClick = {this.handleNews}>Get News.!!</button>
                 </div>
+                <Posts />
             </Aux>
         );
     }
