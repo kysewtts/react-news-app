@@ -7,7 +7,6 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 class Posts extends Component{
     render(){
         const { posts } = this.props;
-        console.log(posts);
         const postList = posts.length ? (
             posts.map(post => {
                 return (
