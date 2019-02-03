@@ -26,6 +26,7 @@ class Input extends Component{
                         <option value="the-times-of-india">The Times of India</option>
                         <option value="the-hindu">The Hindu</option>
                         <option value="espn-cric-info">ESPN Cric Info</option>
+                        <option value="techradar">TechRadar</option>
                     </select>
                 </div>
                 <div style = {{"textAlign": "center"}}>
