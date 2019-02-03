@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 
 import Navbar from './components/Layout/Navbar';
 import Input from './containers/Input/Input';
+import Posts from './containers/Posts/Posts';
 
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <div className="App">
+        <div>
           <Navbar />
           <Input />
+          <Posts />
         </div>
-      </BrowserRouter>
-      
     );
   }
 }
