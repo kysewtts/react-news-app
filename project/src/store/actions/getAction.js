@@ -27,7 +27,6 @@ export const fetch = (sourceType) => {
         dispatch(fetchStart());
         axios.get('https://newsapi.org/v2/top-headlines?sources='+ sourceType +'&apiKey=e410fa0a67c049cd8d491c10c823d973')
             .then(response => {
-                console.log(response);
                 dispatch(fetchSuccess(response.data.articles));
             })
             .catch(error => {
