@@ -8,10 +8,7 @@ const navbar = (props) => {
         <Aux>
             <nav>
                 <div className="nav-wrapper">
-                    <Link to = '/' className="brand-logo">Logo</Link>
-                    <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><Link to = '/'>Sass</Link></li>
-                    </ul>
+                    <Link to = '/' className="brand-logo center" style = {{"textDecoration": "none"}}>NewsOnReact</Link>
                 </div>
             </nav>
         </Aux>
