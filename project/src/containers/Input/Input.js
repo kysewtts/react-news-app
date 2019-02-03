@@ -18,7 +18,6 @@ class Input extends Component{
         this.props.onSubmit(this.state.selectCategory);
     }
     render(){
-        console.log(this.state);
         return(
             <Aux>
                 <div className="input-field col s12" style = {{"width": "50%", "margin": "50px auto"}}>
