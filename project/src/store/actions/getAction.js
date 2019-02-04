@@ -30,7 +30,8 @@ export const fetch = (sourceType) => {
                 dispatch(fetchSuccess(response.data.articles));
             })
             .catch(error => {
-                dispatch(fetchFail(error.response.data.error));
+                console.log(error);
+                dispatch(fetchFail(error.response.data.message));
             })
     };
 };
