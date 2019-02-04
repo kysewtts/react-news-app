@@ -7,7 +7,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 class Posts extends Component{
     render(){
         const { posts } = this.props;
-        const postList = posts.length ? (
+        let postList = posts.length ? (
             posts.map(post => {
                 return (
                         <div className="post card" key = {post.title}>
@@ -24,6 +24,14 @@ class Posts extends Component{
          ) : (
              this.props.loading ? <Spinner /> : null
          ) ;
+         if(this.props.error){
+             postList = (
+                 <div>
+                    <h3 className = "center">Oops, Error Encountered</h3>
+                    <p>{this.props.error}</p>
+                 </div>
+             );
+         }
         return(
             <div className="container" style = {{"marginTop": "50px"}}>
                 {postList}
@@ -36,7 +44,8 @@ class Posts extends Component{
 const mapStateToProps = state => {
     return {
         posts: state.data,
-        loading: state.loading
+        loading: state.loading,
+        error: state.error
     }
 }
 
